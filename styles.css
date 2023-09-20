@@ -1,0 +1,112 @@
+html{
+    min-height: 100%;
+    background-image: url("https://www.clinicaladvisor.com/wp-content/uploads/sites/11/2020/06/diabetes-care_G_1213259073.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    font-size: 1em;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+input{
+    text-align: center;
+    color:black;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 10px;
+}
+
+body,
+ul,
+li,
+p {
+    font-family: tahoma;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    opacity: 0.9;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(225, 222, 199);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+table {
+    border: 2px solid black;
+    font-size: 12px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 100%; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    padding: 12px; 
+}
+
+select{
+    border-radius: 10px;
+    text-align: left;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+}
+
+table td + td + td + td + td + td + td + td + td + td + td + td + td + td{  /* this will go to the 2nd column of a table directly */
+    font-size: 14px;
+    background: green;
+    color: black;
+    }
+
+footer{
+    background-color: gray;
+}
+
+th{
+    border: 2px;
+    text-align: center;
+    background-color: white;
+    font-style: italic;
+}
+
+td, tr{
+    border: 2px solid black;
+    /*width: 70px;*/
+    padding-right: 8px;
+    font-size: 11px;
+    /*border-collapse: collapse;*/
+}
+
+#legenda{
+    font-family: tahoma;
+    font-size: 10px;
+    text-align: left;
+}
+
+#explicacao{
+    background-color: aliceblue;
+    
+}
+
+button{
+    background-color: green;
+    display: inline-block;
+    padding: .75rem 1.25rem;
+    border-radius: 10rem;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .15rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}

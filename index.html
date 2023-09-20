@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>MVP</title>
+</head>
+
+<body>     
+    <header>
+        <div class="title">
+            <h2>Cálculo de Doses de Insulina</h2>
+    </header>
+
+    <!-- Descrição do Site -->
+    <section id="explicacao">
+        <br>
+        Site voltado para a realização de cálculos referentes a doses de insulina em pessoas com diabetes.<br>
+        Os cálculos serão realizados com base nos dados fornecidos para a aplicação. Tais dados devem ser exatamente como colocado pelo médico.<br><br>
+    </section>
+   
+    <!-- Inserção dos dados fornecidos -->
+    <section>
+        <br><p2><b>Insira os Dados Conforme Prescrição Médica:</b></p2><br/>
+        <input type="text" id="newNome" placeholder="Descrição da Solicitação" required>
+        <input type="text" id="newMetaGlicemicaDia" placeholder="Meta Glicêmica Dia" required>
+        <input type="text" id="newMetaGlicemicaNoite" placeholder="Meta Glicêmica Noite" required>
+        <input type="text" id="newFatorSensibilidade" placeholder="Fator de Sensibilidade" required><br/>
+        <input type="text" id="newRcCafe" placeholder="RC Café" required>
+        <input type="text" id="newRcAlmoco" placeholder="RC Almoço" required>
+        <input type="text" id="newRcLanche" placeholder="RC Lanche" required>
+        <input type="text" id="newRcJanta" placeholder="RC Janta" required><br/>
+        <input type="text" id="newHgt90" placeholder="HGT 90" required>
+        <input type="text" id="newHgt70" placeholder="HGT 70" required><br/><br/>
+        <p2><b>Insira os dados para realização dos cálculos:</b></p2><br/>
+        <input type="text" id="newGlicose" placeholder="Glicose Medida" required>
+        <input type="text" id="newCarboidratos" placeholder="Carboidratos" required><br/><br/>
+        
+        <!-- Escolha do Cálculo a ser realizado -->
+        <p2><b>Selecione qual cálculo deseja realizar:</b></p2><br>
+        <select id="newCalculo">
+            <option value="newCorrecaoDia">Correção Dia</option>
+            <option value="newCorrecaoNoite">Correção Noite</option>
+            <option value="newRcCafe">RC Café</option>
+            <option value="newRcAlmoco">RC Almoço</option>
+            <option value="newRcLanche">RC Lanche</option>
+            <option value="newRcJanta">RC Janta</option>
+        </select>
+        <br><br><button onclick="newDados()" class="addBtn">Calcular</button>
+    </section>
+
+    <!-- Tabela de retorno do Banco de Dados -->
+    <section class="dados">
+        <table id="myTable">
+            <tr>
+                <th>Descrição</th>
+                <th>MG DIA</th>
+                <th>MG NOITE</th>
+                <th>FS</th>
+                <th>RC Café</th>
+                <th>RC Almoço</th>
+                <th>RC Lanche</th>
+                <th>RC Janta</th>
+                <th>HGT 90</th>
+                <th>HGT 70</th>
+                <th>GLIC</th>
+                <th>CARB</th>
+                <th>CALC</th>
+                <th><b>RESP</b></th>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Legenda da Tabela -->
+    <section id="legenda">
+        <div>
+        <p3><b>LEGENDAS:</b></p3>
+        <br><b>MG DIA:</b> Meta Glicêmica Dia
+        <br><b>MG NOITE:</b> Meta Glicêmica Noite
+        <br><b>FS:</b> Fator de Sensibilidade
+        <br><b>RC Café:</b> Relação de Carboidratos no Café
+        <br><b>RC Almoço:</b> Relação de Carboidratos no Almoço
+        <br><b>RC Lanche:</b> Relação de Carboidratos no Lanche
+        <br><b>RC Janta:</b> Relação de Carboidratos na Janta
+        <br><b>HGT 90:</b> Quantidade de doses a serem diminuidas em caso de HGT entre 71 e 90
+        <br><b>HGT 70:</b> Quantidade de doses a serem diminuidas em caso de HGT igual ou abaixo de 70
+        <br><b>GLIC:</b> Glicose Medida na hora
+        <br><b>CARB:</b> Quantidade de Carboidratos à serem ingeridos
+        <br><b>CALC:</b> O que foi solicitado a ser calculado
+        <br><b>RESP:</b> Resposta/Retorno do cálculo solicitado
+        <br><br><b>Obs.:</b> Os campos ficarão com os dados da última inserção pré-definidos, podendo para a próxima consulta apenas colocar a descrição, glicose e carboidratos.
+        </div>
+    </section>
+
+    <footer>
+        <h6>Todos os direitos reservados</h6>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
